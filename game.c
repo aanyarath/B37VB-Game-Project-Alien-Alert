@@ -31,16 +31,16 @@ int main(void)
 
     InitWindow(screenWidth, screenHeight, "Alien Alert!");
     
-    Image image = LoadImage("resources/alienlogo.png");     // Loaded in CPU memory (RAM)
-    Texture2D texture = LoadTextureFromImage(image);          // Image converted to texture, GPU memory (VRAM)
+    Image image = LoadImage("resources/alienlogo.png"); // Loaded in CPU memory (RAM)
+    Texture2D texture = LoadTextureFromImage(image); // Image converted to texture, GPU memory (VRAM)
     UnloadImage(image);
 
     GameScreen currentScreen = LOGO;
 
-    SetTargetFPS(60);               // Set desired framerate (frames-per-second)
+    SetTargetFPS(60); // Set desired framerate (frames-per-second)
 
     // Main game loop
-    while (!WindowShouldClose())    // Detect window close button or ESC key
+    while (!WindowShouldClose()) // Detect window close button or ESC key
     {
         
         switch (currentScreen)
@@ -48,7 +48,7 @@ int main(void)
             case LOGO:
             {
 
-                framesCounter++;    // Count frames
+                framesCounter++;  // Count frames
 
                 // Wait for 2 seconds (120 frames) before jumping to TITLE screen
                 if (framesCounter > 120)
