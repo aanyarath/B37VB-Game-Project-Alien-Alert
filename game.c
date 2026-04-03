@@ -31,6 +31,19 @@ int main(void)
 
     InitWindow(screenWidth, screenHeight, "Alien Alert!");
     
+/*******************************************************************************************
+*
+*   raylib [textures] example - image loading
+*
+*   Example originally created with raylib 1.3, last time updated with raylib 1.3
+*
+*   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
+*   BSD-like license that allows static linking with closed source software
+*
+*   Copyright (c) 2015-2025 Ramon Santamaria (@raysan5)
+*
+********************************************************************************************/
+    
     Image image = LoadImage("resources/alienlogo.png"); // Loaded in CPU memory (RAM)
     Texture2D texture = LoadTextureFromImage(image); // Image converted to texture, GPU memory (VRAM)
     UnloadImage(image);
@@ -40,6 +53,18 @@ int main(void)
     SetTargetFPS(60); // Set desired framerate (frames-per-second)
 
     // Main game loop
+/*******************************************************************************************
+*
+*   raylib [core] example - basic screen manager
+
+*   Example originally created with raylib 4.0, last time updated with raylib 4.0
+*
+*   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
+*   BSD-like license that allows static linking with closed source software
+*
+*   Copyright (c) 2021-2025 Ramon Santamaria (@raysan5)
+*
+********************************************************************************************/
     while (!WindowShouldClose()) // Detect window close button or ESC key
     {
         
